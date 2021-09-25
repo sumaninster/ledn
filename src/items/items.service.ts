@@ -13,14 +13,26 @@
  */
 let items: Items = data;
 
-function sortBy(prop: any) {
-  return function(a: any,b: any){
-     if (a[prop] > b[prop]){
-         return 1;
-     } else if(a[prop] < b[prop]){
-         return -1;
-     }
-     return 0;
+function sortBy(prop: any, order: string) {
+  switch (order) {
+    default:
+      return function(a: any,b: any){
+        if (a[prop] > b[prop]){
+            return 1;
+        } else if(a[prop] < b[prop]){
+            return -1;
+        }
+        return 0;
+      }
+    case "desc":
+      return function(a: any,b: any){
+        if (a[prop] < b[prop]){
+            return 1;
+        } else if(a[prop] > b[prop]){
+            return -1;
+        }
+        return 0;
+      }
   }
 }
 
@@ -29,7 +41,7 @@ function sortBy(prop: any) {
  */
 
 export const filter = async (country: string, mfa: string, fname: string, lname: string, 
-  sortcol: string, page: number, limit: number): Promise<Item[]> => {
+  sortcol: string, order: string, page: number, limit: number): Promise<Item[]> => {
   
   let obj = Object.values(items);
 
@@ -44,10 +56,10 @@ export const filter = async (country: string, mfa: string, fname: string, lname:
 
   switch (sortcol) {
     case "tokens":
-      obj.sort(sortBy("amt"))
+      obj.sort(sortBy("amt", order))
       break;
     case "created":
-      obj.sort(sortBy("createdDate"))
+      obj.sort(sortBy("createdDate", order))
       break;
   }
 
