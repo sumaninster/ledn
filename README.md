@@ -42,40 +42,40 @@ Examples:
 
 2. http://localhost:7000/api/v1/-/-/-/-/-/-/-/-
 
-All data, no filter, no sorting, first 100 rows
+    All data, no filter, no sorting, first 100 rows
 
 3. http://localhost:7000/api/v1/-/-/-/-/tokens/-/-/-
 
-Sorted by number of Ledn tokens, first 100 rows
+    Sorted by number of Ledn tokens, first 100 rows
 
 4. http://localhost:7000/api/v1/-/-/-/-/tokens/desc/-/-
 
-Sorted by number of Ledn tokens, descending order, first 100 rows
+    Sorted by number of Ledn tokens, descending order, first 100 rows
 
 5. http://localhost:7000/api/v1/-/-/-/-/created/-/-/-
 
-Sorted by created date, first 100 rows
+    Sorted by created date, first 100 rows
 
 6. http://localhost:7000/api/v1/-/-/-/-/created/-/2/-
 
-Sorted by created date, page 2, defaut limit 100 (rows: 101 - 200)
+    Sorted by created date, page 2, defaut limit 100 (rows: 101 - 200)
 
 7. http://localhost:7000/api/v1/-/-/-/-/created/-/2/10
 
-Sorted by created date, page 2, limit 10 (rows: 11 - 20)
+    Sorted by created date, page 2, limit 10 (rows: 11 - 20)
 
 8. http://localhost:7000/api/v1/MX/-/-/-/-/-/-/-
 
-Filterd by country: MX, first 100 rows
+    Filterd by country: MX, first 100 rows
 
 9. http://localhost:7000/api/v1/-/SMS/-/-/-/-/-/-
 
-Filterd by mfs: SMS, first 100 rows
+    Filterd by mfs: SMS, first 100 rows
 
 10. http://localhost:7000/api/v1/-/-/Elwin/-/-/-/-/-
 
-Filterd by first name: Elwin, first 100 rows
+    Filterd by first name: Elwin, first 100 rows
 
 11. http://localhost:7000/api/v1/-/-/-/Smith/-/-/-/-
 
-Filterd by last name: Smith, first 100 rows
+    Filterd by last name: Smith, first 100 rows
