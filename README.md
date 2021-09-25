@@ -150,7 +150,7 @@ JSON:
 
     All data, no filter, no sorting, first 100 rows
 
-3. http://localhost:7000/api/v1/-/-/-/-/tokens/-/-/-
+3. http://localhost:7000/api/v1/
 
 
     JSON:
