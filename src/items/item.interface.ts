@@ -15,3 +15,14 @@ export interface BaseItem {
   export interface Item extends BaseItem {
     id: number;
   }
+
+  export interface ReqData {
+    country: string;
+    mfa: string;
+    fname: string;
+    lname: string;
+    sortcol: string;
+    order: string;
+    page: number;
+    limit: number;
+  }
