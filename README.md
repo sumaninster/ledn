@@ -103,8 +103,8 @@ JSON:
     sort column option: [ tokens | created ]
 6. order: provide sort order [ or hyphen (-) for default order (ascending) ]
     sort order option: [ asc | desc ]
-7. page: provide page number [ or hyphen 0 for default page data (page 1) ]
-8. limit: provide limit [ or hyphen 0 for default limit (default limit is set to 100, max limit is set to 1000) ]
+7. page: provide page number [ or 0 for default page data (page 1) ]
+8. limit: provide limit [ or 0 for default limit (default limit is set to 100, max limit is set to 1000) ]
 
 ### Examples (POST):
 
