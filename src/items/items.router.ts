@@ -4,7 +4,7 @@
 
  import express, { Request, Response } from "express";
  import * as ItemService from "./items.service";
- import { BaseItem, Item } from "./item.interface";
+ import { Item } from "./item.interface";
 
  /**
  * Router Definition

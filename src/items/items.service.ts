@@ -4,7 +4,7 @@
  * Data Model Interfaces
  */
 
- import { BaseItem, Item } from "./item.interface";
+ import { Item } from "./item.interface";
  import { Items } from "./items.interface";
  import * as data from "./data/accounts_large.json";
 
