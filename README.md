@@ -29,13 +29,14 @@ URL: http://localhost:7000/api/v1/:country/:mfa/:fname/:lname/:sortcol/:order/:p
 
 Examples:
 
-1. http://localhost:7000/api/v1/PA/TOTP/Scotty/Hegmann/tokens/1/10
+1. http://localhost:7000/api/v1/PA/TOTP/Scotty/Hegmann/tokens/asc/1/10
 
 country: PA
 mfa: TOTP
 fname: Scotty
 lname: Hegmann
 sortcol: tokens
+order: asc
 page: 1
 limit: 10
 
