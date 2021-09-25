@@ -64,6 +64,9 @@ export const filter = async (country: string, mfa: string, fname: string, lname:
   }
 
   if (page <= 0) page = 1;
+  if (limit <= 0) limit = 1;
+  if (limit > 1000) limit = 1000;
+
   let start = page * limit - limit;
   let end = page * limit;
 
