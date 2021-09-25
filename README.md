@@ -24,7 +24,7 @@ URL: http://localhost:7000/api/v1/:country/:mfa/:fname/:lname/:sortcol/:order/:p
     sort column option: [ tokens | created ]
 6. order: provide sort order [ or hyphen (-) for default order (ascending) ]
     sort order option: [ asc | desc ]
-7. page: provide page numer [ or hyphen (-) for default page data (page 1) ]
+7. page: provide page number [ or hyphen (-) for default page data (page 1) ]
 8. limit: provide limit [ or hyphen (-) for default limit (default limit set to 100) ]
 
 Examples:
