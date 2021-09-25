@@ -81,7 +81,9 @@ GET URL: http://localhost:7000/api/v1/:country/:mfa/:fname/:lname/:sortcol/:orde
 ## REST API: POST END POINT
 
 PST URL: http://localhost:7000/api/v1/
+
 JSON:
+
 {
     "country": "-",
     "mfa": "-",
@@ -89,8 +91,8 @@ JSON:
     "lname": "-",
     "sortcol": "-",
     "order": "-",
-    "page": 1,
-    "limit": 100
+    "page": 0,
+    "limit": 0
 }
 
 1. country: provide country code [ or hyphen (-) for no country filter ]
@@ -107,54 +109,197 @@ JSON:
 ### Examples (POST):
 
 1. http://localhost:7000/api/v1/
-JSON:
-{
-    "country": "PA",
-    "mfa": "TOTP",
-    "fname": "Scotty",
-    "lname": "Hegmann",
-    "sortcol": "tokens",
-    "order": "asc",
-    "page": 1,
-    "limit": 10
-}
 
-2. http://localhost:7000/api/v1/-/-/-/-/-/-/-/-
+    JSON:
+
+    {
+        "country": "PA",
+        "mfa": "TOTP",
+        "fname": "Scotty",
+        "lname": "Hegmann",
+        "sortcol": "tokens",
+        "order": "asc",
+        "page": 1,
+        "limit": 10
+    }
+
+    - country: PA
+    - mfa: TOTP
+    - fname: Scotty
+    - lname: Hegmann
+    - sortcol: tokens
+    - order: asc
+    - page: 1
+    - limit: 10
+
+2. http://localhost:7000/api/v1/
+
+
+    JSON:
+
+    {
+        "country": "-",
+        "mfa": "-",
+        "fname": "-",
+        "lname": "-",
+        "sortcol": "-",
+        "order": "-",
+        "page": 0,
+        "limit": 0
+    }
 
     All data, no filter, no sorting, first 100 rows
 
 3. http://localhost:7000/api/v1/-/-/-/-/tokens/-/-/-
 
+
+    JSON:
+
+    {
+        "country": "-",
+        "mfa": "-",
+        "fname": "-",
+        "lname": "-",
+        "sortcol": "tokens",
+        "order": "-",
+        "page": 0,
+        "limit": 0
+    }
+
     Sorted by number of Ledn tokens, first 100 rows
 
-4. http://localhost:7000/api/v1/-/-/-/-/tokens/desc/-/-
+4. http://localhost:7000/api/v1/
+
+    JSON:
+
+    {
+        "country": "-",
+        "mfa": "-",
+        "fname": "-",
+        "lname": "-",
+        "sortcol": "tokens",
+        "order": "desc",
+        "page": 0,
+        "limit": 0
+    }
 
     Sorted by number of Ledn tokens, descending order, first 100 rows
 
-5. http://localhost:7000/api/v1/-/-/-/-/created/-/-/-
+5. http://localhost:7000/api/v1/
+
+    JSON:
+
+    {
+        "country": "-",
+        "mfa": "-",
+        "fname": "-",
+        "lname": "-",
+        "sortcol": "created",
+        "order": "-",
+        "page": 0,
+        "limit": 0
+    }
 
     Sorted by created date, first 100 rows
 
-6. http://localhost:7000/api/v1/-/-/-/-/created/-/2/-
+6. http://localhost:7000/api/v1/
+
+    JSON:
+
+    {
+        "country": "-",
+        "mfa": "-",
+        "fname": "-",
+        "lname": "-",
+        "sortcol": "created",
+        "order": "-",
+        "page": 2,
+        "limit": 0
+    }
 
     Sorted by created date, page 2, defaut limit 100 (rows: 101 - 200)
 
-7. http://localhost:7000/api/v1/-/-/-/-/created/-/2/10
+7. http://localhost:7000/api/v1/
+
+    JSON:
+
+    {
+        "country": "-",
+        "mfa": "-",
+        "fname": "-",
+        "lname": "-",
+        "sortcol": "created",
+        "order": "-",
+        "page": 2,
+        "limit": 10
+    }
 
     Sorted by created date, page 2, limit 10 (rows: 11 - 20)
 
-8. http://localhost:7000/api/v1/MX/-/-/-/-/-/-/-
+8. http://localhost:7000/api/v1/
+
+    JSON:
+
+    {
+        "country": "MX",
+        "mfa": "-",
+        "fname": "-",
+        "lname": "-",
+        "sortcol": "-",
+        "order": "-",
+        "page": 0,
+        "limit": 0
+    }
 
     Filterd by country: MX, first 100 rows
 
-9. http://localhost:7000/api/v1/-/SMS/-/-/-/-/-/-
+9. http://localhost:7000/api/v1/
 
-    Filterd by mfs: SMS, first 100 rows
+    JSON:
 
-10. http://localhost:7000/api/v1/-/-/Elwin/-/-/-/-/-
+    {
+        "country": "-",
+        "mfa": "SMS",
+        "fname": "-",
+        "lname": "-",
+        "sortcol": "-",
+        "order": "-",
+        "page": 0,
+        "limit": 0
+    }
+
+    Filterd by mfa: SMS, first 100 rows
+
+10. http://localhost:7000/api/v1/
+
+    JSON:
+
+    {
+        "country": "-",
+        "mfa": "-",
+        "fname": "Elwin",
+        "lname": "-",
+        "sortcol": "-",
+        "order": "-",
+        "page": 0,
+        "limit": 0
+    }
 
     Filterd by first name: Elwin, first 100 rows
 
-11. http://localhost:7000/api/v1/-/-/-/Smith/-/-/-/-
+11. http://localhost:7000/api/v1/
+
+    JSON:
+
+    {
+        "country": "-",
+        "mfa": "-",
+        "fname": "-",
+        "lname": "Smith",
+        "sortcol": "-",
+        "order": "-",
+        "page": 0,
+        "limit": 0
+    }
 
     Filterd by last name: Smith, first 100 rows
