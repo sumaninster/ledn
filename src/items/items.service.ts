@@ -63,6 +63,7 @@ export const filter = async (country: string, mfa: string, fname: string, lname:
       break;
   }
 
+  if (page <= 0) page = 1;
   let start = page * limit - limit;
   let end = page * limit;
 

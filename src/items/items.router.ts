@@ -19,10 +19,9 @@ export const itemsRouter = express.Router();
 // GET api/v1/:country/:mfa/:fname/:lname/:sortcol/:order/:page/:limit
 
 itemsRouter.get("/:country/:mfa/:fname/:lname/:sortcol/:order/:page/:limit", async (req: Request, res: Response) => {
-  let page: number = parseInt(req.params.page, 10)  || 1;
+  const page: number = parseInt(req.params.page, 10)  || 1;
   const limit: number = parseInt(req.params.limit, 10)  || 100;
   try {
-    if (page <= 0) page = 1;
     const items: Item[] = await ItemService.filter(req.params.country, req.params.mfa, 
       req.params.fname, req.params.lname, req.params.sortcol, req.params.order, page, limit);
 
