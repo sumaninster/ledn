@@ -44,15 +44,20 @@ export const filter = async (country: string, mfa: string, fname: string, lname:
   sortcol: string, order: string, page: number, limit: number): Promise<Item[]> => {
   
   let obj = Object.values(items);
+  
+  const re_country = new RegExp(country , 'gi');
+  const re_mfa = new RegExp(mfa , 'gi');
+  const re_fname = new RegExp(fname , 'gi');
+  const re_lname = new RegExp(lname , 'gi');
 
   if (country != '-')
-    obj = obj.filter(d => d.country === country)
+    obj = obj.filter(d => re_country.test(d.country))
   if (mfa != '-')
-    obj = obj.filter(d => d.mfa === mfa)
+    obj = obj.filter(d => re_mfa.test(d.mfa))
   if (fname != '-')
-    obj = obj.filter(d => d.firstName === fname)
+    obj = obj.filter(d => re_fname.test(d.firstName))
   if (lname != '-')
-    obj = obj.filter(d => d.lastName === lname)
+    obj = obj.filter(d => re_lname.test(d.lastName))
 
   switch (sortcol) {
     case "tokens":
