@@ -4,7 +4,6 @@
  * Data Model Interfaces
  */
 
- import { Item } from "./item.interface";
  import { Items } from "./items.interface";
  import * as data from "./data/accounts_large.json";
 
@@ -41,7 +40,7 @@ function sortBy(prop: any, order: string) {
  */
 
 export const filter = async (country: string, mfa: string, fname: string, lname: string, 
-  sortcol: string, order: string, page: number, limit: number): Promise<Item[]> => {
+  sortcol: string, order: string, page: number, limit: number): Promise<any[]> => {
   
   let obj = Object.values(items);
   

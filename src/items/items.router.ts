@@ -4,7 +4,6 @@
 
  import express, { Request, Response } from "express";
  import * as ItemService from "./items.service";
- import { Item } from "./item.interface";
 
  /**
  * Router Definition
@@ -22,7 +21,7 @@ itemsRouter.get("/:country/:mfa/:fname/:lname/:sortcol/:order/:page/:limit", asy
   try {
     const page: number = parseInt(req.params.page, 10)  || 1;
     const limit: number = parseInt(req.params.limit, 10)  || 100;
-    const items: Item[] = await ItemService.filter(req.params.country, req.params.mfa, 
+    const items = await ItemService.filter(req.params.country, req.params.mfa, 
       req.params.fname, req.params.lname, req.params.sortcol, req.params.order, page, limit);
 
     if (items.length > 0) {
@@ -39,7 +38,7 @@ itemsRouter.get("/:country/:mfa/:fname/:lname/:sortcol/:order/:page/:limit", asy
 
 itemsRouter.post("/", async (req: Request, res: Response) => {
   try {
-    const items: Item[] = await ItemService.filter(req.body.country, req.body.mfa, 
+    const items = await ItemService.filter(req.body.country, req.body.mfa, 
       req.body.fname, req.body.lname, req.body.sortcol, req.body.order, 
       req.body.page, req.body.limit);
 
