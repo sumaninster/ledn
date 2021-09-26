@@ -95,13 +95,13 @@ JSON:
     "limit": 0
 }
 
-1. country: provide country code [ or hyphen (-) for no country filter ]
-2. mfa: provide mfa [ or hyphen (-) for no mfa filter ]
-3. fname: provide first name [ or hyphen (-) for no first name filter ]
-4. lname: provide last name [ or hyphen (-) for no last name filter ]
-5. sortcol: provide sort column [ or hyphen (-) for no column filter ]
+1. country: provide country code [ or hyphen (-) or empty string for no country filter ]
+2. mfa: provide mfa [ or hyphen (-) or empty string for no mfa filter ]
+3. fname: provide first name [ or hyphen (-) or empty string for no first name filter ]
+4. lname: provide last name [ or hyphen (-) or empty string for no last name filter ]
+5. sortcol: provide sort column [ or hyphen (-) or empty string for no column filter ]
     sort column option: [ tokens | created ]
-6. order: provide sort order [ or hyphen (-) for default order (ascending) ]
+6. order: provide sort order [ or hyphen (-) or empty string for default order (ascending) ]
     sort order option: [ asc | desc ]
 7. page: provide page number [ or 0 for default page data (page 1) ]
 8. limit: provide limit [ or 0 for default limit (default limit is set to 100, max limit is set to 1000) ]
