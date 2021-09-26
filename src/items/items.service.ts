@@ -50,13 +50,13 @@ export const filter = async (country: string, mfa: string, fname: string, lname:
   const re_fname = new RegExp(fname , 'gi');
   const re_lname = new RegExp(lname , 'gi');
 
-  if (country != '-')
+  if (country != '-' && country != '')
     obj = obj.filter(d => re_country.test(d.country))
-  if (mfa != '-')
+  if (mfa != '-' && mfa != '')
     obj = obj.filter(d => re_mfa.test(d.mfa))
-  if (fname != '-')
+  if (fname != '-' && fname != '')
     obj = obj.filter(d => re_fname.test(d.firstName))
-  if (lname != '-')
+  if (lname != '-' && lname != '')
     obj = obj.filter(d => re_lname.test(d.lastName))
 
   switch (sortcol) {
