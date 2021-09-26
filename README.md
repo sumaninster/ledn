@@ -95,6 +95,17 @@ JSON:
     "limit": 0
 }
 
+{
+    "country": "",
+    "mfa": "",
+    "fname": "",
+    "lname": "",
+    "sortcol": "",
+    "order": "",
+    "page": 0,
+    "limit": 0
+}
+
 1. country: provide country code [ or hyphen (-) or empty string for no country filter ]
 2. mfa: provide mfa [ or hyphen (-) or empty string for no mfa filter ]
 3. fname: provide first name [ or hyphen (-) or empty string for no first name filter ]
